@@ -31,14 +31,15 @@ window.onload = function() {
         for (let e = 0; e < extension.length; ++e) {
 
           let temp = document.createElement('li');
-          temp.innerHTML = '${pronoun[i]}${adjective[j]}${noun[n]}';
+          temp.textContent = pronoun[i] + adjective[j] + noun[n] + "." + extension[e]
+          domain.appendChild(temp)
 
           // add a condition that checks for the last three characters (substring)
           // if they are "com", add a dot before it, capcom => cap.com
           // slice or splice on the string
 
           // if the last 3 characters are 'com'
-          if (noun[n].endsWith(extension[e])) {
+          /* if (noun[n].endsWith(extension[e])) {
             const lastThree = noun.slice(-extension[e].length)
             const restOfWord = noun.slice(0, -extension[e].length)
             let text = (pronoun[i] + adjective[j] + restOfWord + "." + lastThree)
@@ -48,9 +49,9 @@ window.onload = function() {
           } else {
             let text = (pronoun[i] + adjective[j] + noun[n] + "." + extension[e])
             const item = document.createElement("li")
-            item.textContent = text;
-            domain.appendChild(item)
-          };
+            item.textContent = text; */
+            /* domain.appendChild(item);
+            console.log(listOfItems); */
         };
       };
     };
